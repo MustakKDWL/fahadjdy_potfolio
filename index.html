@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fahad Jadiya - PHP Developer</title>
+
+  <!-- css link -->
+   <link rel="stylesheet" href="assets/css/style.css">
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+   
+  <style>
+    
+  </style>
+</head>
+<body>
+
+  <!-- header start -->
+   <div class="main-header">
+
+  <header class="main-header">
+    <div class="background-dots"></div>
+    <div class="background-text">Fahad Jadiya</div>
+    <div class="content">
+      <div class="header-line">
+        <h1 id="line1">Hello</h1>
+        <hr id="hrLine">
+      </div>
+      <h2 id="line2" style="font-size: 3.3rem;margin-top: 10px;margin-right: -15px;">I Am Fahad Jadiya</h2>
+      <p id="line3" >A professional web developer</p>
+      <div class="buttons">
+        <button>Contact Me</button>
+        <button>View Portfolio</button>
+      </div>
+    </div>
+    <div class="image-container">
+      <div class="developer-img" id="devImg">
+        <img src="assets/img/man-sits-desk-with-computer-monitor-showing-man-working-his-computer_1013341-201457.png" alt="Fahad Jadiya">
+      </div>
+    </div>
+  </header>
+</div>
+
+  <!-- header end -->
+
+
+
+
+  <div class="container about-section">
+    <div class="row align-items-center">
+        <div class="col-md-6 about-image">
+            <img src="assets/img/pixelcut-export.png" alt="Developer Illustration">
+        </div>
+        <div class="col-md-6 about-content">
+            <h2><strong>Let's</strong><br><strong>Introduce About</strong><br><strong>Myself</strong></h2>
+            <p>I am a highly motivated and creative Frontend Developer with a strong passion for crafting interactive and visually appealing user experiences. With expertise in HTML, CSS, JavaScript, and modern frameworks, I focus on building responsive and high-performance web applications.</p>
+            <p>My goal is to merge innovation with functionality, ensuring seamless digital interactions for users. I am always eager to learn and implement new technologies to enhance my development skills and create impactful solutions.</p>
+            <a href="#" class="btn-download">Download CV</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+  <!-- service start -->
+
+
+
+  <div class="main-service">
+      <section class="services-header" >
+    <h1> Developer Services</h1>
+    <p>Delivering top-notch web solutions, from design to deployment, crafted for your success.</p>
+  </section>
+  <section class="services-section">
+    
+    <div class="service-card">
+      <img src="assets/img/s3.png" alt="UI/UX Design Icon">
+     
+      <h3>Web Design</h3>
+      <p>Modern and responsive web design tailored to your brand, ensuring a seamless user experience.</p>
+    </div>
+
+    <div class="service-card">
+      <img loading="lazy" src="assets/img/s2.png" alt="Web Development Icon">
+     
+      <h3>UI/UX Design</h3>
+      <p>Creative UI/UX designs focused on user engagement and intuitive interfaces for maximum usability.</p>
+    </div>
+    <div class="service-card">
+      <img src="assets/img/s1.png" alt="Web Design Icon">
+      
+      <h3 f>Web Developing</h3>
+      <p>Robust and scalable web development using the latest technologies for high-performance solutions.</p>
+    </div>
+ 
+    <div class="service-card">
+      
+      <img src="assets/img/s4.png" alt="SEO Optimization Icon">
+      <h3>SEO Optimize</h3>
+      <p>Effective SEO strategies to boost your website's visibility and improve search engine rankings.</p>
+    </div>
+  </section>
+</div>
+
+
+
+
+  <!-- service end -->
+
+
+  
+   <!-- experience strat -->
+
+
+
+   <section class="experience-header">
+    <h1>My Experience</h1>
+    <p>Passionate about building scalable and high-performance web applications with a focus on user experience.</p>
+</section>
+<div class="container py-5" style="padding-bottom: 50px;padding-top: 50px;">
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <h4>February 2023 - Present</h4>
+            <p>Software Developer | Techaxion</p>
+        </div>
+        <div class="timeline-item">
+            <!-- <div class="timeline-dot"></div> -->
+            <h4>May 2022 - January 2023</h4>
+            <p>PHP Developer | Hidden Brains</p>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <h4>June 2021 - April 2022</h4>
+            <p>Web Developer | Namaste Hindustan</p>
+        </div>
+    </div>
+</div>
+
+
+  <!-- experience end -->
+ 
+
+
+
+  <script>
+    window.addEventListener('load', () => {
+      const animateElement = (id, delay) => {
+        setTimeout(() => {
+          const el = document.getElementById(id);
+          el.style.opacity = 1;
+          el.style.transform = 'translateY(0)';
+        }, delay);
+      };
+
+      animateElement('line1', 500);
+      animateElement('hrLine', 800);
+      animateElement('line2', 1200);
+      animateElement('line3', 1600);
+
+      setTimeout(() => {
+        const devImg = document.getElementById('devImg');
+        devImg.style.opacity = 1;
+        devImg.style.transform = 'translateY(0) scale(1)';
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
