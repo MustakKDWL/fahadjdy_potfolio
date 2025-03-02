@@ -1,74 +1,152 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Projects</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <style>
-        body {
-            background-color: #121212;
-            color: #fff;
-            font-family: Arial, sans-serif;
-        }
-        .portfolio {
-            padding: 50px 0;
-        }
-        .project-card {
-            background: #1e1e1e;
-            border-radius: 10px;
-            padding: 20px;
-            transition: transform 0.3s ease;
-        }
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-        .project-card img {
-            width: 100%;
-            border-radius: 10px;
-        }
-        .project-title {
-            font-size: 1.5rem;
-            margin-top: 15px;
-        }
-        .btn-primary {
-            background-color: #ff9800;
-            border: none;
-        }
-        .btn-primary:hover {
-            background-color: #e68900;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+
+  
+<style>
+
+
+
+
+.experience-education {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.experience, .education {
+  width: 48%;
+  padding: 30px;
+}
+
+.experience h1, .education h1 {
+  font-size: 2rem;
+  color: var(--text-color);
+  font-weight: 700;
+}
+
+.experience p, .education p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Timeline Wrapper */
+.timeline {
+  position: relative;
+  padding-left: 30px;
+}
+
+/* Vertical Line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  width: 20px;
+  height: 100%;
+  background-color: var(--primary-color);
+}
+
+/* Timeline Items */
+.timeline-item {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 20px;
+}
+
+/* Timeline Dots */
+.timeline-item .timeline-dot {
+  position: absolute;
+  left: -5px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  border: 2px solid rgb(71, 2, 2);
+  box-shadow: 0 0 5px var(--primary-color);
+}
+
+.timeline-item h4 {
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.timeline-item p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .experience-education {
+    flex-direction: column;
+  }
+
+  .experience, .education {
+    width: 100%;
+  }
+}
+
+
+</style>
 </head>
 <body>
-    <div class="container portfolio">
-        <h2 class="text-center mb-5">My Projects</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="project-card">
-                    <img src="project1.jpg" alt="Project 1">
-                    <h3 class="project-title">Project One</h3>
-                    <p>Brief description of the project goes here.</p>
-                    <a href="#" class="btn btn-primary">View Project</a>
-                </div>
+  <section class="experience-education">
+    <div class="experience">
+        <h1>My Experience</h1>
+        <p>Passionate about building scalable and high-performance web applications with a focus on user experience.</p>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h4>February 2023 - Present</h4>
+                <p>Software Developer | Techaxion</p>
             </div>
-            <div class="col-md-4">
-                <div class="project-card">
-                    <img src="project2.jpg" alt="Project 2">
-                    <h3 class="project-title">Project Two</h3>
-                    <p>Brief description of the project goes here.</p>
-                    <a href="#" class="btn btn-primary">View Project</a>
-                </div>
+            <div class="timeline-item">
+                <h4>May 2022 - January 2023</h4>
+                <p>PHP Developer | Hidden Brains</p>
             </div>
-            <div class="col-md-4">
-                <div class="project-card">
-                    <img src="project3.jpg" alt="Project 3">
-                    <h3 class="project-title">Project Three</h3>
-                    <p>Brief description of the project goes here.</p>
-                    <a href="#" class="btn btn-primary">View Project</a>
-                </div>
+            <div class="timeline-item">
+                <h4>June 2021 - April 2022</h4>
+                <p>Web Developer | Namaste Hindustan</p>
             </div>
         </div>
     </div>
+
+    <div class="education">
+        <h1>My Education</h1>
+        <p>Continuous learning to stay ahead in the tech industry.</p>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h4>2020 - 2023</h4>
+                <p>Bachelor's in Computer Science | XYZ University</p>
+            </div>
+            <div class="timeline-item">
+                <h4>2018 - 2020</h4>
+                <p>Higher Secondary | ABC School</p>
+            </div>
+            <div class="timeline-item">
+                <h4>2016 - 2018</h4>
+                <p>Secondary School | DEF School</p>
+            </div>
+            <div class="timeline-item">
+                <h4>2014 - 2016</h4>
+                <p>High School | GHI School</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 </body>
 </html>
+
