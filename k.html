@@ -1,153 +1,111 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Section</title>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+        }
 
-  
-<style>
+        .project-section {
+            padding: 50px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+        }
+        .project-section h1 {
+          font-size: 3rem;
+          color: var(--text-color);
+          font-weight: 700;
+        }
+        
+         p {
+          font-size: 1.1rem;
+          color: #555;
+          margin-top: 10px;
+        }
 
+        .project {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted for better layout */
+            gap: 20px;
+            max-width: 900px; /* Reduced width */
+        }
 
+        .project-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            height: 200px;
+        }
 
+        .project-card img {
+            width: 100%;
+            /* height: auto; */
+            height: 200px;
+            display: block;
+            border-radius: 10px;
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
 
-.experience-education {
-  display: flex;
-  justify-content: space-between;
-  gap: 50px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 50px 20px;
-}
+        .project-card:hover img {
+            opacity: 0.7; /* Reduce opacity on hover */
+            transform: scale(0.95); /* Reduce size slightly */
+        }
 
-.experience, .education {
-  width: 48%;
-  padding: 30px;
-}
-buububbbubug
+        .project-link {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 22px; /* Adjusted size */
+            color: #fff;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
 
-.experience h1, .education h1 {
-  font-size: 2rem;
-  color: var(--text-color);
-  font-weight: 700;
-}
-
-.experience p, .education p {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 20px;
-}
-
-/* Timeline Wrapper */
-.timeline {
-  position: relative;
-  padding-left: 30px;
-}
-
-/* Vertical Line */
-.timeline::before {
-  content: "";
-  position: absolute;
-  left: 10px;
-  top: 0;
-  width: 20px;
-  height: 100%;
-  background-color: var(--primary-color);
-}
-
-/* Timeline Items */
-.timeline-item {
-  position: relative;
-  padding-left: 30px;
-  margin-bottom: 20px;
-}
-
-/* Timeline Dots */
-.timeline-item .timeline-dot {
-  position: absolute;
-  left: -5px;
-  top: 5px;
-  width: 12px;
-  height: 12px;
-  background-color: var(--primary-color);
-  border-radius: 50%;
-  border: 2px solid rgb(71, 2, 2);
-  box-shadow: 0 0 5px var(--primary-color);
-}
-
-.timeline-item h4 {
-  font-size: 1.2rem;
-  color: var(--text-color);
-}
-
-.timeline-item p {
-  font-size: 1rem;
-  color: #555;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .experience-education {
-    flex-direction: column;
-  }
-
-  .experience, .education {
-    width: 100%;
-  }
-}
-
-
-</style>
+        .project-card:hover .project-link {
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
-  <section class="experience-education">
-    <div class="experience">
-        <h1>My Experience</h1>
-        <p>Passionate about building scalable and high-performance web applications with a focus on user experience.</p>
-        <div class="timeline">
-            <div class="timeline-item">
-                <h4>February 2023 - Present</h4>
-                <p>Software Developer | Techaxion</p>
-            </div>
-            <div class="timeline-item">
-                <h4>May 2022 - January 2023</h4>
-                <p>PHP Developer | Hidden Brains</p>
-            </div>
-            <div class="timeline-item">
-                <h4>June 2021 - April 2022</h4>
-                <p>Web Developer | Namaste Hindustan</p>
-            </div>
-        </div>
-    </div>
+  <h1>Projects</h1>
+  <p>Explore some of the web development projects I have worked on.</p>
 
-    <div class="education">
-        <h1>My Education</h1>
-        <p>Continuous learning to stay ahead in the tech industry.</p>
-        <div class="timeline">
-            <div class="timeline-item">
-                <h4>2020 - 2023</h4>
-                <p>Bachelor's in Computer Science | XYZ University</p>
-            </div>
-            <div class="timeline-item">
-                <h4>2018 - 2020</h4>
-                <p>Higher Secondary | ABC School</p>
-            </div>
-            <div class="timeline-item">
-                <h4>2016 - 2018</h4>
-                <p>Secondary School | DEF School</p>
-            </div>
-            <div class="timeline-item">
-                <h4>2014 - 2016</h4>
-                <p>High School | GHI School</p>
-            </div>
+<section class="project-section">
+ 
+    <div class="project">
+        <div class="project-card">
+            <img src="Screenshot 2025-03-02 113707.png" alt="Project 1">
+            <a href="https://example.com/project1" class="project-link" target="_blank">
+              <i class="fas fa-eye"></i>
+            </a>
+        </div>
+        <div class="project-card">
+            <img src="Screenshot 2025-03-02 113707.png" alt="Project 2">
+            <a href="https://example.com/project2" class="project-link" target="_blank">
+              <i class="fas fa-eye"></i>
+            </a>
+        </div>
+        <div class="project-card">
+            <img src="Screenshot 2025-03-02 113707.png" alt="Project 3">
+            <a href="https://example.com/project3" class="project-link" target="_blank">
+              <i class="fas fa-eye"></i>
+            </a>
         </div>
     </div>
 </section>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 </body>
 </html>
-

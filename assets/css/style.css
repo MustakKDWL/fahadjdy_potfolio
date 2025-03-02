@@ -436,3 +436,16 @@ header {
           }
         }
         
+   
+      
+        .service-icon {
+          font-size: 50px;
+          padding-bottom: 20px;
+          transition: color 0.3s ease, transform 0.3s ease;
+      }
+      
+      /* Hover Effect */
+      .service-card:hover .service-icon {
+          color: var(--primary-color); /* Darker Red on Hover */
+          transform: scale(1.1);
+      }
