@@ -80,25 +80,25 @@
     <section class="services-section">
 
         <div class="service-card">
-            <i class="fas fa-paint-brush service-icon"></i> <!-- Web Design Icon -->
+            <img src="./assets/img/pngtree-paper-plane-aviation-design-isolated-vector-png-image_34720944.png" alt="" srcset=""> <!-- Web Design Icon -->
             <h3>Web Design</h3>
             <p>Modern and responsive web design tailored to your brand, ensuring a seamless user experience.</p>
         </div>
 
         <div class="service-card">
-            <i class="fas fa-laptop-code service-icon"></i> <!-- UI/UX Design Icon -->
+          <img src="./assets/img/4700972.png" alt="" srcset=""> <!-- UI/UX Design Icon -->
             <h3>UI/UX Design</h3>
             <p>Creative UI/UX designs focused on user engagement and intuitive interfaces for maximum usability.</p>
         </div>
 
         <div class="service-card">
-            <i class="fas fa-code service-icon"></i> <!-- Web Developing Icon -->
+          <img src="./assets/img/digital-services.png" alt="" srcset=""> <!-- Web Developing Icon -->
             <h3>Web Developing</h3>
             <p>Robust and scalable web development using the latest technologies for high-performance solutions.</p>
         </div>
 
         <div class="service-card">
-            <i class="fas fa-search service-icon"></i> <!-- SEO Optimization Icon -->
+          <img src="./assets/img/speed (1).png" alt="" srcset=""> <!-- SEO Optimization Icon -->
             <h3>SEO Optimize</h3>
             <p>Effective SEO strategies to boost your website's visibility and improve search engine rankings.</p>
         </div>
@@ -171,7 +171,51 @@
 
 
   <!-- experience end -->
- <!-- my new section  -->
+
+
+ <!-- project start  -->
+
+
+
+  <section class="project-section">
+    <h1 >Projects</h1>
+    <p>Explore some of the web development projects I have worked on.</p>
+    <div class="tabs">
+      <div id="all" class="tab active" onclick="filterProjects('all')">All</div>
+      <div id="website" class="tab" onclick="filterProjects('website')">Website</div>
+      <div id="frontend" class="tab" onclick="filterProjects('frontend')">Frontend</div>
+    </div>
+    <div class="project">
+      <div class="project-card website">
+        <img src="assets/img/project1.png" alt="Project 1" />
+        <a href="https://stechqualityparts.com/" class="project-link" target="_blank">
+          <i class="fas fa-plus"></i>
+        </a>
+      </div>
+      <div class="project-card frontend">
+        <img src="assets/img/project3.png" alt="Project 2" />
+        <a href="https://qualitybodyparts.com/" class="project-link" target="_blank">
+          <i class="fas fa-plus"></i>
+        </a>
+      </div>
+      <div class="project-card website">
+        <img src="assets/img/project2.png" alt="Project 3" />
+        <a href="https://rackman.co.in/" class="project-link" target="_blank">
+          <i class="fas fa-plus"></i>
+        </a>
+      </div>
+      <div class="project-card frontend">
+        <img src="assets/img/project4.png" alt="Project 4" />
+        <a href="https://pyramidinvestment.in/" class="project-link" target="_blank">
+          <i class="fas fa-plus"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
+ <!-- project end  -->
 
 
 
@@ -197,5 +241,23 @@
       }, 2000);
     });
   </script>
+
+
+<script>
+  function filterProjects(category) {
+    let cards = document.querySelectorAll(".project-card");
+    cards.forEach((card) => {
+      if (category === "all" || card.classList.contains(category)) {
+        card.classList.remove("hidden");
+      } else {
+        card.classList.add("hidden");
+      }
+    });
+    document.querySelectorAll(".tab").forEach((tab) => {
+      tab.classList.remove("active");
+    });
+    document.getElementById(category).classList.add("active");
+  }
+</script>
 </body>
 </html>
