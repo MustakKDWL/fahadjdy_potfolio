@@ -1,187 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project Section</title>
-    <script
-      src="https://kit.fontawesome.com/your-fontawesome-kit.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Section</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #E12B38;
+      --text-color: #222;
+      --border-color: #e12b38;
+      --button-hover-shadow: rgba(255, 126, 95, 0.4);
+    }
 
-    <style>
-      :root {
-        --primary-color: #e12b38;
-        --text-color: #222;
-        --background-text-color: rgba(225, 43, 56, 0.05);
-        --button-hover-shadow: rgba(255, 126, 95, 0.4);
-        --border-color: #e12b38;
-      }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
-    
-      .project-section {
-        padding: 80px 10%;
+    body {
+      background: #fff;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      padding: 50px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 50px; /* Space between text and image */
+    }
+
+    .text-content {
+      flex: 1;
+      max-width: 500px;
+      padding-right: 50px; /* Extra space on right */
+    }
+
+    .subtitle {
+      color: var(--primary-color);
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 60px;
+      line-height: 70px;
+      color: var(--text-color);
+      margin: 10px 0;
+    }
+
+    .description {
+      font-size: 1.125rem;
+      margin-bottom: 2rem;
+      line-height: 1.75;
+      font-weight: 300;
+      color: var(--text-color);
+      opacity: 0.8;
+    }
+
+    .image-content {
+      flex: 1;
+      text-align: center;
+    }
+
+    .image-content img {
+      max-width: 90%;
+      height: auto;
+    }
+
+    /* Contact Form Section */
+    .contact-container {
+      display: flex;
+      width: 100%;
+      max-width: 1000px;
+      gap: 50px;
+      margin: auto;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    /* Left Contact Info */
+    .contact-info {
+      flex: 1;
+      min-width: 250px;
+      margin-top: vw;
+    }
+
+    .contact-info div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      font-size: 18px;
+      color: var(--text-color);
+      margin-top: 5vw;
+    }
+
+    .contact-info i {
+      color: var(--primary-color);
+      font-size: 22px;
+    }
+
+    /* Right Form Section */
+    .contact-form {
+      flex: 1;
+      min-width: 300px;
+      max-width: 500px;
+      margin-top: 6vw;
+      margin-bottom: 50px;
+    }
+
+    .input-group {
+      position: relative;
+      margin-bottom: 15px;
+    }
+
+    .input-group input,
+    .input-group textarea {
+      width: 100%;
+      padding: 12px 15px;
+      padding-right: 45px; /* Space for icon on the right */
+      border: 1px solid var(--border-color);
+      border-radius: 25px;
+      background: #f9f9f9;
+      font-size: 16px;
+      outline: none;
+      transition: 0.3s ease;
+    }
+
+    .input-group input:focus,
+    .input-group textarea:focus {
+      border-color: var(--primary-color);
+      box-shadow: 0 0 8px rgba(225, 43, 56, 0.3);
+    }
+
+    .input-group textarea {
+      height: 120px;
+      resize: none;
+    }
+
+    /* Icons on Right Side */
+    .input-group i {
+      position: absolute;
+      right: 15px; /* Align to right */
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--primary-color);
+      font-size: 16px;
+    }
+
+    .contact-form button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 25px;
+      background-color: var(--primary-color);
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .contact-form button:hover {
+      background-color: #c9222e;
+      box-shadow: 0px 4px 10px var(--button-hover-shadow);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
         text-align: center;
-        position: relative;
-        z-index: 2;
-        font-family: "Poppins", sans-serif;
-
-      }
-         .geometric-bg {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          45deg,
-          rgba(225, 43, 56, 0.15) 25%,
-          transparent 25%,
-          transparent 50%,
-          rgba(225, 43, 56, 0.15) 50%,
-          rgba(225, 43, 56, 0.15) 75%,
-          transparent 75%,
-          transparent
-        );
-        background-size: 50px 50px;
-        opacity: 0.3;
-        z-index: -1;
-      }
-
-
-      .tabs {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        margin-bottom: 20px;
-      }
-
-      .tab {
-        padding: 10px 20px;
-        cursor: pointer;
-        border: 2px solid var(--border-color);
-        border-radius: 5px;
-        background: white;
-        font-weight: bold;
-      }
-
-      .tab.active {
-        background: var(--primary-color);
-        color: white;
-      }
-
-      .project {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         gap: 30px;
-        justify-content: center;
       }
 
-      .project-card {
-        position: relative;
-        overflow: hidden;
-        border-radius: 12px;
-        background: var(--background-text-color);
-        width: 100%;
-        height: 220px;
-        transition: transform 0.3s ease-in-out;
-        border: 4px solid var(--border-color);
+      .text-content {
+        padding-right: 0;
       }
 
-      .project-card img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 8px;
-        transition: opacity 0.3s ease-in-out;
+      .image-content img {
+        max-width: 100%;
       }
 
-      .project-card:hover img {
-        opacity: 0.3;
+      .contact-container {
+        flex-direction: column;
+        gap: 30px;
       }
 
-      .project-link {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 28px;
-        color: white;
-        background: rgba(0, 0, 0, 0.7);
-        padding: 15px;
-        border-radius: 50%;
-        opacity: 0;
-        transition: opacity 0.3s ease-in-out;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 50px;
-        height: 50px;
-        text-decoration: none;
+      .contact-info {
+        text-align: center;
       }
+    }
 
-      .project-card:hover .project-link {
-        opacity: 1;
-      }
+  </style>
+</head>
+<body>
 
-      .hidden {
-        display: none;
-      }
-    </style>
-    <script>
-      function filterProjects(category) {
-        let cards = document.querySelectorAll(".project-card");
-        cards.forEach((card) => {
-          if (category === "all" || card.classList.contains(category)) {
-            card.classList.remove("hidden");
-          } else {
-            card.classList.add("hidden");
-          }
-        });
-        document.querySelectorAll(".tab").forEach((tab) => {
-          tab.classList.remove("active");
-        });
-        document.getElementById(category).classList.add("active");
-      }
-    </script>
-  </head>
-  <body>
-    <div class="geometric-bg"></div>
-    <section class="project-section">
-      <h1>Projects</h1>
-      <p>Explore some of the web development projects I have worked on.</p>
-      <div class="tabs">
-        <div id="all" class="tab active" onclick="filterProjects('all')">All</div>
-        <div id="website" class="tab" onclick="filterProjects('website')">Website</div>
-        <div id="frontend" class="tab" onclick="filterProjects('frontend')">Frontend</div>
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="text-content">
+        <p class="subtitle">Say Hello 👋</p>
+        <h2>Let's Work <br> Together.</h2>
+        <p class="description">
+          I'm always happy to have a conversation whether it's for a potential project request, 
+          to get some advice, to ask a question or just to network, my inbox is always open. 
+          I'll get back to you ASAP.
+        </p>
       </div>
-      <div class="project">
-        <div class="project-card website">
-          <img src="assets/img/project1.png" alt="Project 1" />
-          <a href="https://stechqualityparts.com/" class="project-link" target="_blank">
-            <i class="fas fa-plus"></i>
-          </a>
-        </div>
-        <div class="project-card frontend">
-          <img src="assets/img/project3.png" alt="Project 2" />
-          <a href="https://qualitybodyparts.com/" class="project-link" target="_blank">
-            <i class="fas fa-plus"></i>
-          </a>
-        </div>
-        <div class="project-card website">
-          <img src="assets/img/project2.png" alt="Project 3" />
-          <a href="https://rackman.co.in/" class="project-link" target="_blank">
-            <i class="fas fa-plus"></i>
-          </a>
-        </div>
-        <div class="project-card frontend">
-          <img src="assets/img/project4.png" alt="Project 4" />
-          <a href="https://pyramidinvestment.in/" class="project-link" target="_blank">
-            <i class="fas fa-plus"></i>
-          </a>
-        </div>
+      <div class="image-content">
+        <img src="assets/img/Administrative-Final-01.jpg" alt="Contact Illustration">
       </div>
-    </section>
-  </body>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <div class="contact-container">
+    <!-- Left Contact Info -->
+    <div class="contact-info">
+      <div><i class="fas fa-envelope"></i> robhaynes0420@gmail.com</div>
+      <div><i class="fas fa-home"></i> Manchester, UK</div>
+      <div><i class="fas fa-phone"></i> +44 77174 62481</div>
+    </div>
+
+    <!-- Right Contact Form -->
+    <div class="contact-form">
+      <div class="input-group">
+        <input type="text" placeholder="Name">
+        <i class="fas fa-user"></i>
+      </div>
+      <div class="input-group">
+        <input type="email" placeholder="Email">
+        <i class="fas fa-envelope"></i>
+      </div>
+      <div class="input-group">
+        <textarea placeholder="Type your message here"></textarea>
+        <i class="fas fa-comment"></i>
+      </div>
+      <button>Send →</button>
+    </div>
+  </div>
+
+</body>
 </html>
